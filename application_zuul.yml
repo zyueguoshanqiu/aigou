@@ -1,0 +1,44 @@
+spring:
+  profiles:
+    active: dev1
+---
+spring:
+  profiles: dev
+  application:
+    name: MICROSERVICE-ZUUL
+server:
+  port: 9527
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:7001/eureka
+  instance:
+    instance-id: zuul9527
+    prefer-ip-address: true
+zuul:
+  prefix: "/aigou"  #前缀
+  ignored-services: "*" #不能直接用服务名访问
+  routes:
+    flat.serviceId: plat-service
+    flat.path: /plat/**
+
+---
+spring:
+  profiles: dev1
+  application:
+    name: MICROSERVICE-ZUUL
+server:
+  port: 9528
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:7001/eureka
+  instance:
+    instance-id: zuul9527
+    prefer-ip-address: true
+zuul:
+  prefix: "/aigou"  #前缀
+  ignored-services: "*" #不能直接用服务名访问
+  routes:
+    flat.serviceId: plat-service
+    flat.path: /plat/**
