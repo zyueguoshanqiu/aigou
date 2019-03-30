@@ -21,6 +21,8 @@ zuul:
   routes:
     flat.serviceId: plat-service
     flat.path: /plat/**
+    product.serviceId: product-service
+    product.path: /product/**
 
 ---
 spring:
