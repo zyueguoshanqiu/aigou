@@ -23,7 +23,22 @@ zuul:
     flat.path: /plat/**
     product.serviceId: product-service
     product.path: /product/**
+    host:
+        connect-timeout-millis: 10000
+        socket-timeout-millis: 60000
 
+hystrix:
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 60000
+--------------------- 
+作者：Lovnx 
+来源：CSDN 
+原文：https://blog.csdn.net/rickiyeat/article/details/69944945 
+版权声明：本文为博主原创文章，转载请附上博文链接！
 ---
 spring:
   profiles: dev1
