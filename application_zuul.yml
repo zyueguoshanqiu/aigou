@@ -25,7 +25,7 @@ zuul:
     product.serviceId: product-service
     product.path: /product/**
     redis.serviceId: redis-privoder
-    redis.path: /redis/**
+    redis.path: /common/**
   host:
     connect-timeout-millis: 10000
     socket-timeout-millis: 60000
