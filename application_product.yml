@@ -22,7 +22,6 @@ eureka:
 feign:
   hystrix:
     enabled: true 
-
 mybatis-plus:
   mapper-locations: classpath:cn/itsource/aigou/mapper/*Mapper.xml
   type-aliases-package: cn.itsource.aigou.domain,cn.itsource.aigou.query
