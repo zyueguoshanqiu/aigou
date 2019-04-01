@@ -22,7 +22,7 @@ eureka:
 
 feign:
   hystrix:
-    enabled: true #¿ªÆô¶ÏÂ·Æ÷
+    enabled: true 
 
 mybatis-plus:
   mapper-locations: classpath:cn/itsource/aigou/mapper/*Mapper.xml
