@@ -23,6 +23,8 @@ zuul:
     flat.path: /plat/**
     product.serviceId: product-service
     product.path: /product/**
+    redis.serviceId: redis-privoder
+    redis.path: /redis/**
   host:
     connect-timeout-millis: 10000
     socket-timeout-millis: 60000
